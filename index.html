@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+    <title>GoLang_HTMX</title>
+  </head>
+  <body class="h-screen w-screen flex flex-col justify-center items-center gap-5">
+    <div id="counter" class="text-9xl">{{.CounterValue}}</div>
+    <div class="w-96 flex gap-3">
+      <button
+        hx-target="#counter"
+        hx-post="/decrease"
+        class="w-full bg-blue-700 hover:bg-blue-800 rounded-lg py-2.5 px-4 text-white text-2xl flex items-center justify-center"
+      >
+        Decrease -
+      </button>
+      <button
+        hx-target="#counter"
+        hx-post="/increase"
+        class="w-full bg-blue-700 hover:bg-blue-800 rounded-lg py-2.5 px-4 text-white text-2xl flex items-center justify-center"
+      >
+        Increase +
+      </button>
+    </div>
+  </body>
+</html>
