@@ -66,5 +66,5 @@ func main() {
 		tmpl.ExecuteTemplate(w, "counter", data)
 	})
 
-	http.ListenAndServe("localhost:3000", r)
+	http.ListenAndServe("localhost:8080", r)
 }
